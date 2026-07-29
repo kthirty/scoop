@@ -1,40 +1,27 @@
 {
     "version": "4.0.3-17892",
-    "description": "Synology Drive Client - Sync files between Synology NAS and Windows computers",
+    "description": "Synology Drive Client for Windows",
     "homepage": "https://www.synology.com/",
     "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.synology.com/company/legal"
+        "identifier": "Freeware"
     },
     "architecture": {
         "64bit": {
             "url": "https://cndl.synology.cn/download/Utility/SynologyDriveClient/4.0.3-17892/Windows/Installer/x86_64/Synology%20Drive%20Client-4.0.3-17892-x64.msi",
-            "hash": "",
-            "extract_dir": ""
+            "hash": ""
         }
     },
     "installer": {
         "script": [
-            "Start-Process msiexec.exe -ArgumentList \"/i `\"$dir\\Synology%20Drive%20Client-4.0.3-17892-x64.msi`\" /qn\" -Wait"
+            "Start-Process msiexec.exe -ArgumentList '/i \"$dir\\Synology Drive Client-4.0.3-17892-x64.msi\" /qn' -Wait"
         ]
     },
     "uninstaller": {
         "script": [
-            "Start-Process msiexec.exe -ArgumentList \"/x `\"$dir\\Synology%20Drive%20Client-4.0.3-17892-x64.msi`\" /qn\" -Wait"
+            "Start-Process msiexec.exe -ArgumentList '/x \"$dir\\Synology Drive Client-4.0.3-17892-x64.msi\" /qn' -Wait"
         ]
     },
     "persist": [
         "data"
-    ],
-    "checkver": {
-        "url": "https://www.synology.com/en-global/support/download/SynologyDriveClient",
-        "regex": "Synology Drive Client-([\\d.-]+)-x64\\.msi"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://cndl.synology.cn/download/Utility/SynologyDriveClient/$version/Windows/Installer/x86_64/Synology%20Drive%20Client-$version-x64.msi"
-            }
-        }
-    }
+    ]
 }
