@@ -1,0 +1,36 @@
+{
+"version": "4.0.3-17892",
+"description": "Synology Drive Client for Windows",
+"homepage": "https://www.synology.com/",
+"license": {
+"identifier": "Freeware"
+},
+"architecture": {
+"64bit": {
+"url": "https://cndl.synology.cn/download/Utility/SynologyDriveClient/4.0.3-17892/Windows/Installer/x86_64/Synology%20Drive%20Client-4.0.3-17892-x64.msi",
+"hash": "skip"
+}
+},
+"installer": {
+"script": [
+"Start-Process msiexec.exe -ArgumentList '/i', "$dir\Synology Drive Client-4.0.3-17892-x64.msi", '/qn', '/norestart' -Wait"
+]
+},
+"bin": [
+"SynologyDrive.exe"
+],
+"persist": [
+"Synology Drive Client-4.0.3-17892-x64.msi"
+],
+"checkver": {
+"url": "https://archive.synology.com/download/Utility/SynologyDriveClient",
+"regex": "([\d\.]+-\d+)"
+},
+"autoupdate": {
+"architecture": {
+"64bit": {
+"url": "https://cndl.synology.cn/download/Utility/SynologyDriveClient/$version/Windows/Installer/x86_64/Synology%20Drive%20Client-$version-x64.msi"
+}
+}
+}
+}
