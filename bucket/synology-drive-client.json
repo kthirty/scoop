@@ -8,7 +8,7 @@
     "architecture": {
         "64bit": {
             "url": "https://cndl.synology.cn/download/Utility/SynologyDriveClient/4.0.3-17892/Windows/Installer/x86_64/Synology%20Drive%20Client-4.0.3-17892-x64.msi",
-            "hash": ""
+            "hash": "DBFBA75A0B404345C5BDF0665A7B10E0F73EC2E032250EF5572468D9579077D4"
         }
     },
     "installer": {
