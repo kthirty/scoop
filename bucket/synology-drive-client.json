@@ -21,6 +21,12 @@
             "Start-Process msiexec.exe -ArgumentList '/x \"$dir\\Synology Drive Client-4.0.3-17892-x64.msi\" /qn' -Wait"
         ]
     },
+     "shortcuts": [
+        [
+            "Synology Drive Client.exe",
+            "Synology Drive Client"
+        ]
+    ],
     "persist": [
         "data"
     ]
