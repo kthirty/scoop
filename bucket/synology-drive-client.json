@@ -23,11 +23,8 @@
     },
      "shortcuts": [
         [
-            "Synology Drive Client.exe",
+            "Synology/SynologyDrive/bin/launcher.exe",
             "Synology Drive Client"
         ]
-    ],
-    "persist": [
-        "data"
     ]
 }
